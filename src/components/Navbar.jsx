@@ -1,18 +1,27 @@
-import { Stack, Typography } from '@mui/material';
-import DehazeIcon from '@mui/icons-material/Dehaze';
+import * as React from 'react';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import IconButton from '@mui/material/IconButton';
+import MenuIcon from '@mui/icons-material/Menu';
+import logovaysolal from '../vaysolar.png';
 
-
-
-function Navbar() {
-    return (
-        <div className="Navbar">
-            <Stack boxShadow='6' direction="row" spacing={1} p={1} sx={{ position: 'stick', background: 'white', alignItems: 'center', textAlign: 'center' }}>
-                <DehazeIcon color='secondary' sx={{color:'rgb(54 151 29 / 83%)'}} />
-                <Typography width='100%' fontWeight='bold' variant='h6'><span style={{color:'#76d176'}}>vay</span>solar</Typography>
-            </Stack >
-
-        </div>
-    );
+export default function ButtonAppBar() {
+  return (
+    <Box sx={{ flexGrow: 1 }}>
+      <AppBar position="static">
+        <Toolbar sx={{ justifyContent: 'space-between', backgroundColor: 'white' }}>
+          <IconButton
+            size="large"
+            edge="start"
+            aria-label="menu"
+          >
+            <MenuIcon color='success' />
+          </IconButton>
+          <img src={logovaysolal} style={{marginLeft:'-36px'}} height='45px' width='110px' alt="" srcset="" />
+          <div />
+        </Toolbar>
+      </AppBar>
+    </Box>
+  );
 }
-
-export default Navbar;
