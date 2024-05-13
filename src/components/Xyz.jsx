@@ -29,19 +29,18 @@ function Xyz() {
         <Stack>
 
         <List
-            sx={{ width: '100%', bgcolor: 'background.paper', fontSize: 'bold', color: 'red', backgroundColor: 'rgb(243 251 241)' }}
+            sx={{top:'8px', bgcolor: 'background.paper', fontSize: 'bold', color: 'red', backgroundColor: 'rgb(243 251 241)' }}
             component="nav"
             aria-labelledby="nested-list-subheader"
             subheader={
-                <ListSubheader component="div" id="nested-list-subheader" sx={{textAlign:'center', paddingLeft:'32px'}}>
-                    <h2>Rooftop solar quotes &nbsp;<HelpIcon /></h2>
-
+                <ListSubheader component="div" id="nested-list-subheader" sx={{ textAlign:'center', paddingLeft:'32px'}}>
+                  <Typography textAlign='justify' variant='h6' fontWeight='bold'> Rooftop solar quotes &nbsp;<HelpIcon /></Typography> 
                 </ListSubheader>
             }
         >
-            <ListItemButton onClick={handleClick} sx={{ boxShadow:'9', color: 'green', backgroundColor: '#d0e9d0'  }} >
-                <ListItemText primary={<Typography><h3 style={{ margin: "unset" ,display:'flex', padding:'0px 16px', paddingLeft:'16px'}}>XYZ Solar Solutions</h3></Typography>} />
-                <ListItemText primary={<Typography><h3 style={{ margin: "unset" }}>Annapurna Sola Tech</h3></Typography>} />
+            <ListItemButton onClick={handleClick} sx={{borderRadius:'8px', boxShadow:'9', color: 'black', backgroundColor: '#d0e9d0'  }} >
+                <ListItemText primary={<Typography color='black' paddingLeft='16px' variant='h6' fontWeight='bold'>XYZ Solar Solutions</Typography>} />
+                <ListItemText primary={<Typography color='black' variant='h6' fontWeight='bold'>Annapurna Sola Tech</Typography>} />
                 {open ? <ExpandLess /> : <ExpandMore />}
             </ListItemButton>
             <Collapse in={open} timeout="auto" unmountOnExit>

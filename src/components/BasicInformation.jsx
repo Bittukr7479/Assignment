@@ -31,7 +31,7 @@ function BasicInformation() {
             component="nav"
             aria-labelledby="nested-list-subheader"
         >
-                <ListItemText primary={<Typography sx={{display:'flex', borderBottom:'1px solid black', padding:'8px', paddingLeft:'32px'}}><h3 style={{ margin: "unset" , color:'green'}}>{item.hName}</h3></Typography>} secondary="" />
+                <ListItemText primary={<Typography variant='h6' fontWeight='bold' sx={{display:'flex', borderBottom:'1px solid black', padding:'8px', paddingLeft:'32px'}}>{item.hName}</Typography>} secondary="" />
                     <List  component="div" disablePadding>
                         <ListItemButton sx={{ pl: 4 , paddingLeft: '32px'}}>
                             <ListItemText

@@ -43,8 +43,8 @@ function Materials() {
             component="nav"
             aria-labelledby="nested-list-subheader"
         >
-            <ListItemButton onClick={handleClick} sx={{boxShadow:'9', color: 'green', backgroundColor: '#d0e9d0', paddingLeft:'32px'}} >
-                <ListItemText primary={<Typography><h3 style={{ margin: "unset" }}>Materials</h3></Typography>} secondary="" />
+            <ListItemButton onClick={handleClick} sx={{ borderRadius:'8px',boxShadow:'9', backgroundColor: '#d0e9d0', paddingLeft:'32px'}} >
+                <ListItemText primary={<Typography color='black' fontWeight='bold' variant='h6'>Materials</Typography>} secondary="" />
                 {open ? <ExpandLess /> : <ExpandMore />}
             </ListItemButton>
             <Collapse sx={{backgroundColor:'#d0e9d0', color:'green'}} in={open} timeout="auto" unmountOnExit>

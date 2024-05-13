@@ -74,18 +74,9 @@ function PaymentDetails() {
     return (<Stack>
 
         <List
-        sx={{width: '100%', bgcolor: 'background.paper', fontSize: 'bold', color: 'green'}}
-        // component="nav"
-        // aria-labelledby="nested-list-subheader"
-        // subheader={
-        //   <ListSubheader component="div" id="nested-list-subheader" >
-        //     Rooftop solar quotes <HelpIcon />
-
-        //   </ListSubheader>
-        // }
-        >
-            <ListItemButton onClick={handleClick} sx={{boxShadow:'9', color: 'green', backgroundColor: '#d0e9d0', paddingLeft:'32px' }} >
-                <ListItemText primary={<Typography><h3 style={{ margin: "unset" }}>PaymentDetails</h3></Typography>} secondary="" />
+            sx={{ width: '100%', bgcolor: 'background.paper', fontSize: 'bold', color: 'green' }}>
+            <ListItemButton onClick={handleClick} sx={{ borderRadius:'6px', boxShadow: '9', color: 'green', backgroundColor: '#d0e9d0', paddingLeft: '32px' }} >
+                <ListItemText primary={<Typography variant='h6' fontWeight='bold' color='black'>PaymentDetails</Typography>} secondary="" />
                 {open ? <ExpandLess /> : <ExpandMore />}
             </ListItemButton>
             <Collapse sx={{ color: 'green', backgroundColor: '#d0e9d0' }} in={open} timeout="auto" unmountOnExit>
@@ -104,7 +95,7 @@ function PaymentDetails() {
                         </ListItemButton>
                     </List>
                 ))}
-                <ListItemText primary={<Typography sx={{ display: 'flex', borderBottom: '1px solid black', padding: '8px', paddingLeft: '32px'}}><h3 style={{ margin: "unset", color:'green' }}>Subsidy</h3></Typography>} sx={{ borderBottom: '1px solid black' }} />
+                <ListItemText primary={<Typography variant='h6' sx={{fontWeight:'bold', display: 'flex', borderBottom: '1px solid black', padding: '8px', paddingLeft: '32px' }}>Subsidy</Typography>} sx={{ borderBottom: '1px solid black' }} />
                 {cardData2.map((item, index) => (
                     <List key={index} component="div" disablePadding>
                         <ListItemButton sx={{ pl: 4 }}>

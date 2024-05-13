@@ -36,15 +36,9 @@ function NetCost() {
             sx={{ width: '100%', bgcolor: 'background.paper', fontSize: 'bold'}}
             component="nav"
             aria-labelledby="nested-list-subheader"
-        // subheader={
-        //   <ListSubheader component="div" id="nested-list-subheader" >
-        //     Rooftop solar quotes <HelpIcon />
-
-        //   </ListSubheader>
-        // }
         >
-            <ListItemButton onClick={handleClick} sx={{ boxShadow:'9', color: 'green', backgroundColor: '#d0e9d0' }} >
-                <ListItemText primary={<Typography><h3 style={{ margin: "unset", paddingLeft:'16px' }}>NetCost</h3></Typography>} secondary="" />
+            <ListItemButton onClick={handleClick} sx={{borderRadius:'8px', boxShadow:'9', backgroundColor: '#d0e9d0' }} >
+                <ListItemText  primary={<Typography color='black' paddingLeft='16px' variant='h6' fontWeight='bold'>NetCost</Typography>} secondary="" />
                 {open ? <ExpandLess /> : <ExpandMore />}
             </ListItemButton>
             <Collapse sx={{ backgroundColor: '#d0e9d0', color:'green'}} in={open} timeout="auto" unmountOnExit>
