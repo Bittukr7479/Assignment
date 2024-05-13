@@ -1,13 +1,11 @@
 import React from 'react'
 // import * as React from 'react';
-import ListSubheader from '@mui/material/ListSubheader';
 import List from '@mui/material/List';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import Collapse from '@mui/material/Collapse';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
-import HelpIcon from '@mui/icons-material/Help';
 import { Stack, Typography } from '@mui/material';
 
 const cardData1 = [
@@ -57,7 +55,6 @@ const cardData2 = [
 
         primary1: 'After Installation',
         primary2: 'After Installation',
-        // secondary1: 'INR 43K(Central) INR 20K(State)',
         secondary1: (
             <span><b>INR 43K</b>(Central) <br /> <b>INR 20K</b>(State)</span>
         ),

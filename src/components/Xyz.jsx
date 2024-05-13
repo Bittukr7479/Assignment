@@ -1,5 +1,4 @@
 import React from 'react'
-// import * as React from 'react';
 import ListSubheader from '@mui/material/ListSubheader';
 import List from '@mui/material/List';
 import ListItemButton from '@mui/material/ListItemButton';
@@ -41,7 +40,7 @@ function Xyz() {
             }
         >
             <ListItemButton onClick={handleClick} sx={{ boxShadow:'9', color: 'green', backgroundColor: '#d0e9d0'  }} >
-                <ListItemText primary={<Typography><h3 style={{ margin: "unset" ,display:'flex', padding:'0px 16px', paddingLeft:'6px'}}>XYZ Solar Solutions</h3></Typography>} />
+                <ListItemText primary={<Typography><h3 style={{ margin: "unset" ,display:'flex', padding:'0px 16px', paddingLeft:'16px'}}>XYZ Solar Solutions</h3></Typography>} />
                 <ListItemText primary={<Typography><h3 style={{ margin: "unset" }}>Annapurna Sola Tech</h3></Typography>} />
                 {open ? <ExpandLess /> : <ExpandMore />}
             </ListItemButton>

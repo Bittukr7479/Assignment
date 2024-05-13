@@ -1,12 +1,7 @@
 import React from 'react'
-// import * as React from 'react';
-import ListSubheader from '@mui/material/ListSubheader';
 import List from '@mui/material/List';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
-import Collapse from '@mui/material/Collapse';
-import ExpandLess from '@mui/icons-material/ExpandLess';
-import ExpandMore from '@mui/icons-material/ExpandMore';
 import HelpIcon from '@mui/icons-material/Help';
 import { Typography } from '@mui/material';
 
@@ -35,17 +30,8 @@ function BasicInformation() {
             sx={{ width: '100%', bgcolor: 'background.paper', fontSize: 'bold', color: 'green', backgroundColor: 'white'}}
             component="nav"
             aria-labelledby="nested-list-subheader"
-        // subheader={
-        //   <ListSubheader component="div" id="nested-list-subheader" >
-        //     Rooftop solar quotes <HelpIcon />
-
-        //   </ListSubheader>
-        // }
         >
-            {/* <ListItemButton sx={{ borderBottom: '1px solid black' }} > */}
                 <ListItemText primary={<Typography sx={{display:'flex', borderBottom:'1px solid black', padding:'8px', paddingLeft:'32px'}}><h3 style={{ margin: "unset" , color:'green'}}>{item.hName}</h3></Typography>} secondary="" />
-            {/* </ListItemButton> */}
-                {/* {cardData.map((item, index) => ( */}
                     <List  component="div" disablePadding>
                         <ListItemButton sx={{ pl: 4 , paddingLeft: '32px'}}>
                             <ListItemText
