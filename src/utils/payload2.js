@@ -287,4 +287,5 @@ function getProposalPayload2() {
 }
     const proposalPayload2 = getProposalPayload2();
 
-    console.log(proposalPayload2);
+    console.log(proposalPayload2)
+    
