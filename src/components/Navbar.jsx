@@ -18,7 +18,7 @@ export default function ButtonAppBar() {
           >
             <MenuIcon color='success' />
           </IconButton>
-          <img src={logovaysolal} style={{marginLeft:'-36px'}} height='45px' width='110px' alt="" srcset="" />
+          <img src={logovaysolal} style={{marginLeft:'-36px'}} height='45px' width='110px' alt="vaysolar" srcSet="" />
           <div />
         </Toolbar>
       </AppBar>
