@@ -1,4 +1,4 @@
-function getProposalPayload() {
+function getProposalPayload2() {
     return {
         "id": 8,
         "proposal": {
@@ -285,6 +285,6 @@ function getProposalPayload() {
         }
     }
 }
-    const proposalPayload = getProposalPayload();
+    const proposalPayload2 = getProposalPayload2();
 
-    console.log(proposalPayload);
+    console.log(proposalPayload2);
