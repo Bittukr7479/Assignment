@@ -4,13 +4,13 @@ import Materials from './components/Materials';
 import NetCost from './components/NetCost';
 import BasicInformation from './components/BasicInformation';
 import PaymentDetails from './components/PaymentDetails';
-import Xyz from './components/Xyz';
+import RooftopSolarQuotes from './components/RooftopSolarQuotes';
 import { Stack } from '@mui/material';
 function App() {
   return (
     <Stack display='grid' gap='7px'>
       <Navbar/>
-      <Xyz/>
+      <RooftopSolarQuotes/>
       <BasicInformation/>
       <Materials/>
       <PaymentDetails/>

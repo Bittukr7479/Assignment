@@ -6,7 +6,7 @@ import ListItemText from '@mui/material/ListItemText';
 import Collapse from '@mui/material/Collapse';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
-import { Stack, Typography } from '@mui/material';
+import { Divider, Stack, Typography, ListItem } from '@mui/material';
 
 const cardData1 = [
     {
@@ -45,10 +45,10 @@ const cardData2 = [
         primary1: 'Before Installation',
         primary2: 'Before Installation',
         secondary1: (
-            <span><b>-</b></span>
+            <span style={{ lineHeight: '1.4' }}><b>-</b></span>
         ),
         secondary2: (
-            <span><b>-</b></span>
+            <span style={{ lineHeight: '1.4' }}><b>-</b></span>
         )
     },
     {
@@ -56,10 +56,10 @@ const cardData2 = [
         primary1: 'After Installation',
         primary2: 'After Installation',
         secondary1: (
-            <span><b>INR 43K</b>(Central) <br /> <b>INR 20K</b>(State)</span>
+            <span style={{ lineHeight: '1.4' }}><b>INR 43K</b>(Central) <br /> <b>INR 20K</b>(State)</span>
         ),
         secondary2: (
-            <span><b>INR 43K</b>(Central) <br /> <b>INR 20K</b>(State)</span>
+            <span style={{ lineHeight: '1.4' }}><b>INR 43K</b>(Central) <br /> <b>INR 20K</b>(State)</span>
         )
     }
 ]
@@ -71,19 +71,21 @@ function PaymentDetails() {
     const handleClick = () => {
         setOpen(!open);
     };
-    return (<Stack>
+    return (<Stack padding='6px'>
 
         <List
-            sx={{ width: '100%', bgcolor: 'background.paper', fontSize: 'bold', color: 'green' }}>
-            <ListItemButton onClick={handleClick} sx={{ borderRadius:'6px', boxShadow: '9', color: 'green', backgroundColor: '#d0e9d0', paddingLeft: '32px' }} >
+            sx={{ boxShadow: '0px 4px 7px rgba(0, 0, 0, 0.3)', borderRadius: '10px', width: '100%', backgroundColor: '#F3FBF0', fontSize: 'bold', padding: 'unset' }}
+        >
+            <ListItemButton onClick={handleClick} sx={{ borderRadius: '10px', color: 'black', backgroundColor: '#F3FBF0', paddingLeft: '15px' }} >
                 <ListItemText primary={<Typography variant='h6' fontWeight='bold' color='black'>PaymentDetails</Typography>} secondary="" />
                 {open ? <ExpandLess /> : <ExpandMore />}
             </ListItemButton>
-            <Collapse sx={{ color: 'green', backgroundColor: '#d0e9d0' }} in={open} timeout="auto" unmountOnExit>
 
+            <Collapse sx={{ color: 'green', backgroundColor: '#F3FBF0', borderRadius: '10px', }} in={open} timeout="auto" unmountOnExit>
+                <Divider />
                 {cardData1.map((item, index) => (
                     <List key={index} component="div" disablePadding>
-                        <ListItemButton sx={{ pl: 4 }}>
+                        <ListItem sx={{ pl: 4, paddingLeft: '15px' }}>
                             <ListItemText
                                 primary={<Typography variant='body' component='div'>{item.primary1}</Typography>}
                                 secondary={<Typography fontWeight='bold' variant='body' component='div'>{item.secondary1}</Typography>}
@@ -92,22 +94,23 @@ function PaymentDetails() {
                                 primary={<Typography variant='body' component='div'>{item.primary2}</Typography>}
                                 secondary={<Typography fontWeight='bold' variant='body' component='div'>{item.secondary2}</Typography>}
                             />
-                        </ListItemButton>
+                        </ListItem>
                     </List>
                 ))}
-                <ListItemText primary={<Typography variant='h6' sx={{fontWeight:'bold', display: 'flex', borderBottom: '1px solid black', padding: '8px', paddingLeft: '32px' }}>Subsidy</Typography>} sx={{ borderBottom: '1px solid black' }} />
+                <ListItemText primary={<Typography variant='h6' sx={{ fontWeight: 'bold', display: 'flex', padding: '8px', paddingLeft: '15px' }}>Subsidy</Typography>} />
+                <Divider />
                 {cardData2.map((item, index) => (
                     <List key={index} component="div" disablePadding>
-                        <ListItemButton sx={{ pl: 4 }}>
+                        <ListItem sx={{ pl: 4, paddingLeft: '15px' }}>
                             <ListItemText
                                 primary={<Typography variant='body' component='div'>{item.primary1}</Typography>}
-                                secondary={<Typography variant='body' component='div'>{item.secondary1}</Typography>}
+                                secondary={<Typography variant='body' paddingTop='8px' component='div'>{item.secondary1}</Typography>}
                             />
                             <ListItemText
                                 primary={<Typography variant='body' component='div'>{item.primary2}</Typography>}
-                                secondary={<Typography variant='body' component='div'>{item.secondary2}</Typography>}
+                                secondary={<Typography variant='body' paddingTop='8px' component='div'>{item.secondary2}</Typography>}
                             />
-                        </ListItemButton>
+                        </ListItem>
                     </List>
                 ))}
             </Collapse>
