@@ -1,31 +1,33 @@
 import React from 'react';
-import { createRoot } from 'react-dom/client'; // Import createRoot from react-dom/client
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import PlusJakartaSansWoff from './fonts/plus-jakarta-sans.woff';
-// import PlusJakartaSansWoff2 from './fonts/plus-jakarta-sans.woff2';
 
-// Create a root using createRoot
-const root = createRoot(document.getElementById('root'));
+const rootElement = document.getElementById('root');
+const root = ReactDOM.createRoot(rootElement);
 
-// Render your app inside the root
 root.render(
   <React.StrictMode>
-    <style>
-      {`
-        @font-face {
-          font-family: 'Plus Jakarta Sans';
-          font-style: normal;
-          font-weight: 400;
-          src: local('Plus Jakarta Sans'), local('PlusJakartaSans-Regular'),
-               url(${PlusJakartaSansWoff}) format('woff');
-        }
-
-        body {
-          font-family: 'Plus Jakarta Sans', sans-serif;
-          margin: 0px;
-        }
-      `}
-    </style>
-    <App />
+    <BrowserRouter>
+      <style
+        dangerouslySetInnerHTML={{
+          __html: `
+            @font-face {
+              font-family: 'Plus Jakarta Sans';
+              font-style: normal;
+              font-weight: 400;
+              src: local('Plus Jakarta Sans'), local('PlusJakartaSans-Regular'),
+                   url(${PlusJakartaSansWoff}) format('woff');
+            }
+            body {
+              font-family: 'Plus Jakarta Sans', sans-serif;
+              margin: 0px;
+            }
+          `,
+        }}
+      />
+      <App />
+    </BrowserRouter>
   </React.StrictMode>
 );

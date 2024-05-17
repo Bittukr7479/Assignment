@@ -25,7 +25,8 @@ const cardData = [
 ]
 function NetCost() {
 
-    const [open, setOpen] = React.useState(true);
+    const [open, setOpen] = React.useState(false);
+
 
     const handleClick = () => {
         setOpen(!open);
