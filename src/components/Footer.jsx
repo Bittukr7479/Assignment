@@ -4,7 +4,7 @@ import React from 'react'
 function Footer() {
     return (
         <Stack sx={{ position: 'relative', top: '55px'}}>
-            <Typography variant='h6' fontWeight='bold' sx={{ display: 'flex', padding: '8px', paddingLeft:'16px' }}>Schedule Visit</Typography>
+            <Typography variant='h3' fontWeight='bold' sx={{ display: 'flex', padding: '8px', paddingLeft:'16px' }}>Schedule Visit</Typography>
             <Divider/>
 
             <div style={{ display: 'flex', justifyContent: 'space-around', padding: '21px 0px 36px ' }}>

@@ -45,7 +45,7 @@ function RooftopSolarQuotes() {
                         {item}
                     </Link>
                 ))}
-                <Typography fontWeight='bold' fontSize='16px' color='black'>3kW load, 300 sq. ft @ Kanpur, UP</Typography>
+                <Typography fontWeight='bold' fontSize='15px' color='black'>3kW load, 300 sq. ft @ Kanpur, UP</Typography>
             </Breadcrumbs>
             <ListSubheader sx={{ position: 'relative', padding: '7px 5px' }} component="div" id="nested-list-subheader" >
                 <Typography color='black' display='flex' alignItems='center' variant='h6' fontWeight={500} fontSize='23px' >
@@ -56,8 +56,8 @@ function RooftopSolarQuotes() {
                 sx={{ boxShadow: '0px 4px 7px rgba(0, 0, 0, 0.3)', borderRadius: '10px', width: '100%', backgroundColor: '#F3FBF0', fontSize: 'bold', padding: 'unset' }}
             >
                 <ListItemButton onClick={handleClick} sx={{ borderRadius: '10px', paddingLeft: '15px' }} >
-                    <ListItemText  sx={{ width: '50%' }} primary={<Typography color='black' fontWeight='bold' variant='h6'>XYZ Solar Solutions</Typography>} secondary="" />
-                    <ListItemText  sx={{ width: '40%' }} primary={<Typography color='black' fontWeight='bold' variant='h6'>Annapurna Solar Tech.</Typography>} secondary="" />
+                    <ListItemText  sx={{ width: '50%' }} primary={<Typography color='black' fontWeight='bold' variant='h3'>XYZ Solar Solutions</Typography>} secondary="" />
+                    <ListItemText  sx={{ width: '40%' }} primary={<Typography color='black' fontWeight='bold' variant='h3'>Annapurna Solar Tech.</Typography>} secondary="" />
 
                                         {open ? <ExpandLess /> : <ExpandMore />}
 

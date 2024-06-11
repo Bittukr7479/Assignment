@@ -38,7 +38,7 @@ function NetCost() {
                 aria-labelledby="nested-list-subheader"
             >
                 <ListItemButton onClick={handleClick} sx={{ borderRadius: '10px', backgroundColor: '#F3FBF0', paddingLeft: '15px' }} >
-                    <ListItemText primary={<Typography color='black' variant='h6' fontSize='20px' fontWeight='bold'>NetCost</Typography>} secondary="" />
+                <ListItemText primary={<Typography color='black' fontWeight='bold' variant='h3'>NetCost</Typography>} secondary="" />
                     {open ? <ExpandLess /> : <ExpandMore />}
                 </ListItemButton>
                 <Divider />

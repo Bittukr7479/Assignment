@@ -78,7 +78,7 @@ function PaymentDetails() {
             sx={{ boxShadow: '0px 4px 7px rgba(0, 0, 0, 0.3)', borderRadius: '10px', width: '100%', backgroundColor: '#F3FBF0', fontSize: 'bold', padding: 'unset' }}
         >
             <ListItemButton onClick={handleClick} sx={{ borderRadius: '10px', color: 'black', backgroundColor: '#F3FBF0', paddingLeft: '15px' }} >
-                <ListItemText primary={<Typography variant='h6' fontWeight='bold' color='black'>PaymentDetails</Typography>} secondary="" />
+                <ListItemText primary={<Typography variant='h3' fontWeight='bold' color='black'>PaymentDetails</Typography>} secondary="" />
                 {open ? <ExpandLess /> : <ExpandMore />}
             </ListItemButton>
 

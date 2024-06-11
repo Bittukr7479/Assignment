@@ -44,7 +44,7 @@ function Materials() {
                 aria-labelledby="nested-list-subheader"
             >
                 <ListItemButton onClick={handleClick} sx={{ borderRadius: '10px', paddingLeft: '15px' }} >
-                    <ListItemText primary={<Typography color='black' fontWeight='bold' variant='h6'>Materials</Typography>} secondary="" />
+                    <ListItemText primary={<Typography color='black' fontWeight='bold' variant='h3'>Materials</Typography>} secondary="" />
                     {open ? <ExpandLess /> : <ExpandMore />}
                 </ListItemButton>
                 <Collapse sx={{ color: 'green' }} in={open} timeout="auto" unmountOnExit>
