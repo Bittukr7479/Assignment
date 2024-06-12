@@ -56,8 +56,8 @@ function RooftopSolarQuotes() {
                 sx={{ boxShadow: '0px 4px 7px rgba(0, 0, 0, 0.3)', borderRadius: '10px', width: '100%', backgroundColor: '#F3FBF0', fontSize: 'bold', padding: 'unset' }}
             >
                 <ListItemButton onClick={handleClick} sx={{ borderRadius: '10px', paddingLeft: '15px' }} >
-                    <ListItemText sx={{ width: 'auto' }} primary={<Typography color='black' fontWeight='bold' padding='6px 0px' variant='h3'>XYZ Solar Solutions</Typography>} secondary="" />
-                    <ListItemText sx={{ width: 'auto' }} primary={<Typography color='black' fontWeight='bold' padding='6px 0px' variant='h3'>Annapurna Solar Tech.</Typography>} secondary="" />
+                    <ListItemText sx={{ width: '50%' }} primary={<Typography color='black' fontWeight='bold' variant='h3'>XYZ Solar Solutions</Typography>} secondary="" />
+                    <ListItemText sx={{ width: 'calc(50% - 16px)' }} primary={<Typography color='black' fontWeight='bold' variant='h3'>Annapurna Solar Tech.</Typography>} secondary="" />
                     {open ? <ExpandLess /> : <ExpandMore />}
                 </ListItemButton>
                 <Collapse sx={{ color: 'green' }} in={open} timeout="auto" unmountOnExit>

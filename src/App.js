@@ -1,22 +1,18 @@
-import * as React from "react";
+// src/app.js
+
+import React from "react";
 import PropTypes from "prop-types";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import CssBaseline from "@mui/material/CssBaseline";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
-import Container from "@mui/material/Container";
 import Slide from "@mui/material/Slide";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
 import logovaysolal from "./vaysolar.png";
-import Footer from "./components/Footer";
-import Materials from "./components/Materials";
-import NetCost from "./components/NetCost";
-import BasicInformation from "./components/BasicInformation";
-import PaymentDetails from "./components/PaymentDetails";
-import RooftopSolarQuotes from "./components/RooftopSolarQuotes";
-import { ThemeProvider, createTheme } from '@mui/material/styles';
-import './App.css'
+import Account from "../src/pages/Account";
+import './App.css';
 
 const THEME = createTheme({
   typography: {
@@ -48,7 +44,7 @@ HideOnScroll.propTypes = {
 
 function App(props) {
   return (
-    <ThemeProvider theme= {THEME}>
+    <ThemeProvider theme={THEME}>
       <React.Fragment>
         <CssBaseline />
         <HideOnScroll {...props}>
@@ -61,7 +57,7 @@ function App(props) {
                 }}
               >
                 <IconButton size="large" edge="start" aria-label="menu">
-                  <MenuIcon sx={{fontSize:'24px'}} color="success" />
+                  <MenuIcon sx={{ fontSize: "24px" }} color="success" />
                 </IconButton>
                 <img
                   src={logovaysolal}
@@ -77,16 +73,10 @@ function App(props) {
           </AppBar>
         </HideOnScroll>
         <Toolbar />
-        <Container sx={{ padding: "unset", display: "grid", gap: "7px" }}>
-          <RooftopSolarQuotes />
-          <BasicInformation />
-          <Materials />
-          <PaymentDetails />
-          <NetCost />
-          <Footer />
-        </Container>
+        <Account />
       </React.Fragment>
     </ThemeProvider>
   );
 }
+
 export default App;
